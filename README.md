@@ -35,5 +35,5 @@ git clone https://github.com/westolt/frog-game.git
 
 ## Controls
 * Arrow keys -> Move the frog
-* F2 -> Start a new game
+* n -> Start a new game
 * Esc -> Exit the game
