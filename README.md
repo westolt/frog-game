@@ -7,11 +7,19 @@ This is a small project I created in Spring 2025 as part of my learning process.
 ## Installation
 
 1. Make sure you have Python 3.8 or higher installed.
-2. Install Pygame if you don’t have it already:
+2. (Optional) Create a virtual environment:
+```bash
+python3 -m venv venv
+```
+Activate the virtual environment:
+```bash
+source venv/bin/activate
+```
+3. Install Pygame if you don’t have it already:
 ```bash
 pip install pygame
 ```
-3. Download or clone this repository:
+4. Download or clone this repository:
 ```bash
 git clone https://github.com/westolt/frog-game.git
 ```
