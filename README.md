@@ -4,6 +4,10 @@ A simple frog game made with Python and Pygame. The goal is to eat all the flies
 
 This is a small project I created in Spring 2025 as part of my learning process.
 
+## Screenshot
+
+![Frog Game Screenshot](screenshot.png)
+
 ## Installation
 
 1. Make sure you have Python 3.8 or higher installed.
