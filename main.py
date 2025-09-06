@@ -123,8 +123,9 @@ class FrogGame:
                 if event.key == pygame.K_DOWN:
                     self.down = False
 
-                if event.key == pygame.K_F2:
+                if event.key == pygame.K_n:
                     self.new_game()
+                    return
                 if event.key == pygame.K_ESCAPE:
                     exit()
 
@@ -209,7 +210,7 @@ class FrogGame:
         if self.escaping:
             text = self.font.render("Hide under the lily pad!", True, (255, 255, 255))
             self.screen.blit(self.lily_pad, (self.lily_pad_x, self.lily_pad_y))
-            self.screen.blit(text, (self.lily_pad_x, self.lily_pad_y - text.get_height() - 5))
+            self.screen.blit(text, (self.width / 2 - text.get_width() / 2, (self.height / 2 - text.get_height() / 2) - 30))
 
         # Draw frog
         if not self.lost and not self.won:
@@ -227,7 +228,7 @@ class FrogGame:
 
         # Draw instructions
         instr1 = self.font.render(f"Eat all the flies: {self.collected_flies} / 10", True, (255, 255, 255))
-        instr2 = self.font.render("F2 = new game", True, (255, 255, 255))
+        instr2 = self.font.render("n = new game", True, (255, 255, 255))
         instr3 = self.font.render("Esc = close game", True, (255, 255, 255))
 
         padding = 5
@@ -238,7 +239,7 @@ class FrogGame:
 
         self.screen.blit(instr1, (padding, bottom_y + padding))
         self.screen.blit(instr2, (self.width - instr2.get_width() - 200, bottom_y + padding))
-        self.screen.blit(instr3, (self.width - instr3.get_width() - 5, bottom_y + padding + instr2.get_height() + 2))
+        self.screen.blit(instr3, (self.width - instr3.get_width() - 5, bottom_y + padding))
 
         pygame.display.flip()
         self.clock.tick(60)
